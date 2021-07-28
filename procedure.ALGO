@@ -1,0 +1,33 @@
+PROCEDURE produit_scalaire(v1,v2,var ps)
+VAR
+    set_declarations
+BEGIN
+    if (v1.lenght==v2.lenght) then
+    ps:=0
+    FOR i FROM 0 TO v1.lenght-1 STEP 1  DO
+    ps=ps+v1[i]*v2[j]
+    IF (ps==0) THEN
+        write(les deux vecteurs sont orthogonaux)
+    ELSE
+        write(les deux vecteurs ne sont pas orthogonaux)
+    END_IF
+    END_FOR
+    ELSE
+        write(les vecteurs ne sont pas de meme taille)
+    END_IF
+END
+
+
+ALGORITHM search
+VAR
+    v1,v2: : ARRAY_OF integer[n];
+    v:ARRAY_OF integer[2][n];
+    ps:integer;
+
+
+BEGIN
+    FOR i FROM 0 TO v.lenght-1 STEP 1  DO
+        produit_scalaire(arr[i]+1)
+    END_FOR
+    
+END
